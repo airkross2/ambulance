@@ -25,6 +25,9 @@
 
 .header-block-logo {
     margin-right: 44px;
+    min-height: 65px;
+    max-width: 226px;
+    width: 100%;
 }
 
 .logo {
@@ -127,7 +130,8 @@
 .nav {
     width: 100%;
     background: #fff;
-    height: 60px;
+    min-height: 60px;
+    align-items: center;
     display: flex;
     justify-content: space-between;
 }
@@ -170,7 +174,8 @@
     transition: .3s;
     border-bottom: 1px solid #fff;
 }
-.menu-item:hover:not(:first-child) .menu-link{
+
+.menu-item:hover:not(:first-child) .menu-link {
     border-bottom: 1px solid #FE0000;
 }
 
@@ -371,7 +376,6 @@
 
 /* exp */
 .exp-overlay {
-    /* height: 118px; */
     position: relative;
 }
 
@@ -418,7 +422,7 @@
 .discount {
     max-width: 1020px;
     width: 100%;
-    height: 150px;
+    min-height: 150px;
     background: #FFFFFF;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
     position: absolute;
@@ -732,6 +736,10 @@
     justify-content: space-between;
 }
 
+.license-card img {
+    width: 100%;
+}
+
 .license {
     padding-bottom: 130px;
 }
@@ -745,6 +753,10 @@
     max-width: 358px;
     width: 100%;
     padding-bottom: 38px;
+}
+
+.gallery-photo img {
+    width: 100%;
 }
 
 .gallery-photos {
@@ -929,15 +941,536 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 51px;
+    min-height: 51px;
     background: rgba(1, 0, 65, .02);
     padding-left: 18px;
+    padding-top: 13px;
+    padding-bottom: 13px;
 }
 
 .odd {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 51px;
+    min-height: 51px;
+    padding-bottom: 13px;
+    padding-top: 13px;
     padding-left: 18px;
+}
+
+
+.header-m-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-m {
+    background: #f3fbff;
+    display: none;
+    position: fixed;
+    top: 0;
+    z-index: 899;
+    width: 100%;
+}
+
+.header-m-bg {
+    height: 106px;
+    display: none;
+}
+
+.header-m .search-input {
+    background: #f3fbff;
+}
+
+.burger {
+    width: 20px;
+    height: 20px;
+}
+
+.header-m-menu {
+    position: relative;
+}
+
+.m-menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: #FFFFFF;
+    /* dropdown / shadow opened */
+    display: none;
+
+    box-shadow: 0px 0px 8px rgba(37, 40, 43, 0.42);
+    border-radius: 8px;
+    /* border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px; */
+    border-radius: 10px;
+
+    padding: 20px;
+}
+
+.m-menu,
+.m-sub-menu {
+    list-style: none;
+}
+
+.m-sub-menu {
+    padding-left: 15px;
+}
+
+.m-sub-menu-link,
+.m-menu-link {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.1px;
+
+    color: #010041;
+}
+
+.m-menu-link,
+.m-sub-menu-link {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 30px;
+}
+
+.all-serviceis-btn a{
+    width: 100%;
+    max-width: 158px;
+}
+.header-btn a {
+    display: block;
+    width: 100%;
+}
+
+@media screen and (max-width: 1199px) {
+    .container {
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+
+    .header-info-address {
+        display: none;
+    }
+
+    .header-info-phone {
+        margin-left: auto;
+    }
+
+    .search-block {
+        max-width: 160px;
+    }
+
+    .main-content-left {
+        max-width: 398px;
+    }
+
+    .directions-card {
+        max-width: 257px;
+    }
+
+    .exp-overlay img {
+        top: -86px;
+        width: 370px;
+    }
+
+    .menu-item:last-child {
+        margin-right: 0;
+    }
+
+    .menu-item {
+        margin-right: 25px;
+    }
+
+    .directions-card-discr {
+        font-size: 14px;
+    }
+
+    .records-card {
+        max-width: 257px;
+    }
+
+    .records-card-discr {
+        min-height: 247px;
+    }
+
+    .doctors-card {
+        max-width: 206px;
+    }
+
+    .gallery-card {
+        max-width: 286px;
+    }
+
+    .gallery-photo {
+        max-width: 286px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .nav {
+        flex-direction: column;
+    }
+
+    .search-block {
+        margin-top: 15px;
+        max-width: unset;
+        margin-left: 0;
+        margin-right: 0;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+
+    .search-input {
+        max-width: unset;
+    }
+
+    .menu {
+        padding-left: 0;
+        justify-content: center;
+    }
+
+    .main-title {
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    .main-discr {
+        font-size: 16px;
+    }
+
+    .main-content-right-img {
+        height: 430px;
+    }
+
+    .main-content-left {
+        max-width: 298px;
+    }
+
+    .directions-card {
+        max-width: unset;
+        margin-bottom: 30px;
+    }
+
+    .directions-cards {
+        flex-direction: column;
+        /* align-items: center; */
+    }
+
+    .directions-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .directions-card-text {
+        text-align: center;
+    }
+
+    .exp-content .main-title {
+        max-width: 394px;
+    }
+
+    .exp-overlay img {
+        top: -66px;
+        width: 330px;
+    }
+
+    .discount-text {
+        margin-right: 30px;
+    }
+
+    .services-card-discr {
+        font-size: 14px;
+    }
+
+    .services-card {
+        margin-right: 26px;
+        padding: 20px 15px;
+    }
+
+    .records-card-discr {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .records-card {
+        max-width: 205px;
+    }
+
+    .services-card-title {
+        margin-bottom: 12px;
+    }
+
+    .services-card-img {
+        margin-bottom: 15px;
+    }
+
+    .doctors-card {
+        max-width: 150px;
+    }
+
+    .doctors-card-name {
+        font-size: 16px;
+        line-height: 18px;
+        margin-bottom: 15px;
+    }
+
+    .doctors-card-position {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .btn span {
+        font-size: 10px;
+    }
+
+    .gallery-card {
+        max-width: 215px;
+    }
+
+    .gallery-photo {
+        max-width: 215px;
+        padding-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header {
+        display: none;
+    }
+
+    .services-card {
+        margin-right: unset
+    }
+
+    .header-m {
+        display: block;
+    }
+
+    .services-cards {
+        padding-bottom: 0;
+    }
+
+    .header-m-bg {
+        display: block;
+    }
+
+    .main-content-right {
+        display: none;
+    }
+
+    .main-content-left {
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+
+    .exp-overlay {
+        display: none;
+    }
+
+    .directions {
+        padding-bottom: 30px;
+    }
+
+    .discount {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .discount-text {
+        /* justify-content: center; */
+        margin-bottom: 20px;
+    }
+
+    .discount-title {
+        text-align: center;
+    }
+
+    .discount-discr {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .services .section-subtitle {
+        margin-top: 20px;
+    }
+
+    .services-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .all-serviceis-btn .btn {
+        margin-bottom: 20px;
+    }
+
+    .records {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .records-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .records-card {
+        margin-bottom: 30px;
+        max-width: 250px;
+    }
+
+    .records-card-discr {
+        min-height: unset;
+        text-align: center;
+    }
+
+    .records-card-title {
+        text-align: center;
+    }
+
+    .footer .header-btn {
+        display: none;
+    }
+
+    .footer .menu {
+        display: none;
+    }
+
+    .logo {
+        max-width: 162px;
+    }
+
+    .footer .header-content {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .header-info {
+        margin-right: 0;
+        width: max-content;
+    }
+
+    .services {
+        padding-top: 30px;
+    }
+
+    .exp-content {
+        padding-bottom: 30px;
+    }
+
+    /* .services-card{
+        margin-right: 0;
+        width: 100%;
+        max-width: 100%;
+    } */
+    .services-card:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .services-card {
+        max-width: unset;
+        margin-bottom: 20px;
+    }
+
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .serv-page .services-card-discr {
+        min-height: unset;
+    }
+
+    .header-block-logo {
+        margin-right: 0;
+    }
+
+    .header-info-phone {
+        margin-left: 0;
+    }
+
+    .doctors-cards {
+        flex-direction: column;
+    }
+
+    .doctors-card {
+        max-width: unset;
+        width: 100%;
+    }
+
+    .doctors-card-btn .btn {
+        max-width: unset;
+    }
+
+    .doctors {
+        padding-bottom: 30px;
+    }
+
+    .gallery-cards {
+        flex-direction: column;
+    }
+
+    .gallery-card {
+        max-width: unset;
+        margin-bottom: 20px;
+    }
+
+    .license-cards {
+        flex-direction: column;
+    }
+
+    .license {
+        padding-bottom: 30px;
+    }
+
+    .gallery-wrap {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .gallery-photos {
+        flex-direction: column;
+    }
+
+    .gallery-photo {
+        max-width: unset;
+    }
+
+    .gallery {
+        padding-bottom: 30px;
+    }
+
+    .contacts-wrap {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contacts-left {
+        margin-bottom: 30px;
+    }
+
+    .contacts {
+        padding-bottom: 30px;
+    }
+
+    .sub-title {
+        max-width: 206px;
+        width: 100%;
+    }
+
+    .single {
+        padding-bottom: 30px;
+    }
+
+    .even,
+    .odd {
+        padding-right: 10px;
+    }
 }
