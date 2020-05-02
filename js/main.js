@@ -8,3 +8,9 @@ $('.burger').click(function () {
     }
 });
 
+$('.close').click(function(){
+    $('.popup').fadeOut(200);
+});
+$('.call').click(function(){
+    $('.popup').fadeIn(200);
+});
